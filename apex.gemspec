@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'apex/app_info'
+require 'aprs/app_info'
 
 Gem::Specification.new do |spec|
-    spec.name = 'apex'
-    spec.version = Apex::VERSION
+    spec.name = 'aprs'
+    spec.version = Aprs::VERSION
     spec.authors = ['Jeffrey Phillips Freeman']
     spec.email = ['jeffrey.freeman@syncleus.com']
 
-    spec.summary = %q{Reference implementation for the APEX Radio protocol.}
-    spec.description = %q{Reference implementation for the APEX Radio protocol.}
-    spec.homepage = 'http://apexprotocol.com'
+    spec.summary = %q{Ruby library for APRS communications.}
+    spec.description = %q{Ruby library for APRS communications.}
+    spec.homepage = 'https://github.com/Syncleus/aprs'
 
     # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
     # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -31,8 +31,6 @@ Gem::Specification.new do |spec|
     spec.add_dependency 'colorize'
     spec.add_dependency 'abstraction'
     spec.add_dependency 'json'
-    spec.add_dependency 'serialport'
-    spec.add_dependency 'methadone'
     spec.add_development_dependency 'bundler'
     spec.add_development_dependency 'rake'
     spec.add_development_dependency 'rdoc'

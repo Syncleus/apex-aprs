@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in apex.gemspec
+# Specify your gem's dependencies in aprs.gemspec
 gemspec
