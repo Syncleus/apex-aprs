@@ -1,5 +1,5 @@
 require 'test/unit'
-require_relative 'kiss_mock'
+require 'kiss/test/kiss_mock'
 require_relative '../lib/aprs/aprs_kiss'
 
 module Aprs
