@@ -6,6 +6,7 @@ require 'aprs/app_info'
 Gem::Specification.new do |spec|
     spec.name = 'aprs'
     spec.version = Aprs::VERSION
+    spec.licenses = ['Apache-2.0']
     spec.authors = ['Jeffrey Phillips Freeman']
     spec.email = ['jeffrey.freeman@syncleus.com']
 
