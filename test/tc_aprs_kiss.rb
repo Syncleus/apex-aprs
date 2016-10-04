@@ -1,23 +1,23 @@
 require 'test/unit'
 require 'kiss/test/kiss_mock'
-require_relative '../lib/aprs/aprs_kiss'
+require_relative '../lib/apex/aprs_kiss'
 
-module Aprs
+module Apex
     DECODED_FRAME_KISS = {
-        'source': 'W2GMD-1',
-        'destination': 'OMG',
-        'path': ['WIDE1-1', 'WIDE2-2'],
-        'text': 'test_encode_frame'
+        :source => 'W2GMD-1',
+        :destination => 'OMG',
+        :path => ['WIDE1-1', 'WIDE2-2'],
+        :text => 'test_encode_frame'
     }
     ENCODED_FRAME_KISS = [192, 0, 158, 154, 142, 64, 64, 64, 96, 174, 100, 142, 154, 136, 64, 98, 174, 146, 136, 138, 98,
                           64, 98, 174, 146, 136, 138, 100, 64, 101, 3, 240, 116, 101, 115, 116, 95, 101, 110, 99, 111, 100,
                           101, 95, 102, 114, 97, 109, 101, 192]
 
     DECODED_FRAME_KISS_INVALID = {
-        'source': 'KG6WTF',
-        'destination': 'S7TSUV',
-        'path': ['MTOSO-2', 'WIDE2*' 'qAR', 'KF6FIR-10'],
-        'text': '`17El#X-/kg6wtf@gosselinfamily.com'
+        :source => 'KG6WTF',
+        :destination => 'S7TSUV',
+        :path => ['MTOSO-2', 'WIDE2*' 'qAR', 'KF6FIR-10'],
+        :text => '`17El#X-/kg6wtf@gosselinfamily.com'
     }
     ENCODED_FRAME_KISS_INVALID = [192, 0, 166, 110, 168, 166, 170, 172, 96, 150, 142, 108, 174, 168, 140, 96, 154, 168, 158,
                                   166, 158, 64, 100, 174, 146, 136, 138, 100, 226, 130, 164, 224, 150, 140, 108, 140, 146, 164,

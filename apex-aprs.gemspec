@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'aprs/app_info'
+require 'apex/app_info'
 
 Gem::Specification.new do |spec|
     spec.name = 'apex-aprs'
