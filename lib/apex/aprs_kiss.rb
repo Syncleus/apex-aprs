@@ -1,6 +1,6 @@
 require 'kiss/constants'
 
-module Aprs
+module Apex
     class AprsKiss
 
         protected

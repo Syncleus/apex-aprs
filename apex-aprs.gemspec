@@ -4,15 +4,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'aprs/app_info'
 
 Gem::Specification.new do |spec|
-    spec.name = 'aprs'
-    spec.version = Aprs::VERSION
+    spec.name = 'apex-aprs'
+    spec.version = Apex::VERSION
     spec.licenses = ['Apache-2.0']
     spec.authors = ['Jeffrey Phillips Freeman']
     spec.email = ['jeffrey.freeman@syncleus.com']
 
-    spec.summary = %q{library for APRS communications.}
-    spec.description = %q{Ruby library for APRS communications.}
-    spec.homepage = 'https://github.com/Syncleus/aprs'
+    spec.summary = %q{Library for APRS, Automatic Packet Reporting System, communications including the next-generation APEX extensions.}
+    spec.description = %q{Ruby library for APRS, Automatic Packet Reporting System, communications including the next-generation APEX extensions.}
+    spec.homepage = 'https://github.com/Syncleus/apex-aprs'
 
     # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
     # to allow pushing to a single host or delete this section to allow pushing to any host.
