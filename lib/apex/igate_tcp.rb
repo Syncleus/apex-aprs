@@ -26,15 +26,15 @@ module Apex
         end
 
         private
-        def format_path(path_list)
+        def self.format_path(path_list)
             path_list.join(',')
         end
 
         private
-        def encode_frame(frame)
+        def self.encode_frame(frame)
             formatted_frame = [frame[:source], frame[:destination]].join('>')
             if frame[:path] and frame[:path].length > 0
-                formatted_frame = [formatted_frame, format_path(frame[:path])].join(',')
+                formatted_frame = [formatted_frame, IGateTcp::format_path(frame[:path])].join(',')
             end
             formatted_frame += ':'
             formatted_frame += frame[:text]
@@ -42,7 +42,7 @@ module Apex
         end
 
         private
-        def decode_frame(frame)
+        def self.decode_frame(frame)
             decoded_frame = {}
             frame_so_far = ''
             path = nil
@@ -145,7 +145,7 @@ module Apex
                 while @packet_buffer.length > 0
                     packet = @packet_buffer.pop
                     unless filter_logresp and packet.start_with?('#') and packet.include? 'logresp'
-                        return decode_frame(packet)
+                        return IGateTcp::decode_frame(packet)
                     end
                 end
 
@@ -156,7 +156,7 @@ module Apex
         public
         def write(frame, *args, **kwargs)
             @lock.synchronize do
-                encoded_frame = encode_frame(frame)
+                encoded_frame = IGateTcp::encode_frame(frame)
                 @aprsis_sock.puts( encoded_frame.map { |c| c.ord } )
             end
         end
