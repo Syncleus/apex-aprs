@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
     spec.authors = ['Jeffrey Phillips Freeman']
     spec.email = ['jeffrey.freeman@syncleus.com']
 
-    spec.summary = %q{Library for APRS, Automatic Packet Reporting System, communications including the next-generation APEX extensions.}
-    spec.description = %q{Ruby library for APRS, Automatic Packet Reporting System, communications including the next-generation APEX extensions.}
+    spec.summary = %q{Library for APRS, Automatic Packet Reporting System, communications including the next-generation APEX extensions. Includes an APRS-IS client.}
+    spec.description = %q{Ruby library for APRS, Automatic Packet Reporting System, communications including the next-generation APEX extensions. Includes an APRS-IS client.}
     spec.homepage = 'https://github.com/Syncleus/apex-aprs'
 
     # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
